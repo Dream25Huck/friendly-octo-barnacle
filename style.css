@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+    margin: 0;
+    padding-left: 0;
+    box-sizing: border-box;
+    
+}
+
+li, a{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: rgb(247, 247, 247);
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    height: 200px;    
+    backdrop-filter: blur(1000px);
+    background-image: linear-gradient(100deg, rgb(76, 7, 236), rgb(239, 128, 97));
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.logo{
+    height: 200px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+ 
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #d8cf1b;
+}
+
+.contactBtn{
+     padding: 9px 25px;
+     background-color: rgb(252, 249, 166);
+     border: none;
+     border-radius: 50px;
+     cursor: pointer;
+     transition: all 0.3s ease 0s;
+}
+
+.contactBtn:hover{
+    background-color: rgb(255, 255, 0);
+}
+
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+
+.content{
+    background-image: linear-gradient(100deg, rgb(106, 106, 253), rgb(239, 128, 97));
+    width: 100%;
+    min-height: 100vh;
+}
+.profile{
+    width: 50px;
+}
+
+
+
+
+
+/*     LOGO MENU      */
+
+.menu{
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-evenly;
+
+}
+
+.VipKz{
+    text-align: center;
+    margin-top: 7%;
+    transition: 0.5s all;
+}
+
+.VipKz:hover
+{ 
+    transform: translateY(-15px);
+}
+
+
+
+.musicImg{
+    width: 250px;
+
+}
+
+
+.musicTxt{
+    margin-top: 8%;
+}
+
+
+
+#logoEnglish{
+    width: 250px;
+    
+}
+
+.englishTxt{
+    text-align: center;
+    
+}
+
+
+.englishSongs{
+    transition: 0.5s all;
+    margin-top: 7%;
+    text-align: center;
+}
+
+
+.englishSongs:hover{
+    transform: translateY(-15px);
+}
+
+
+
+#carMusicImg{
+    width: 250px;
+    
+}
+
+.carMusicLogo{
+    margin-top: 7%;
+    text-align: center;
+    transition: 0.5s all;
+}
+.carMusicLogo:hover{
+    transform: translateY(-15px);
+}
+
+#CarMusicText{
+    margin-top: 7%;
+}
+
+
+
+
+/* Second  row menu of the main page */
+@media screen and (max-width: 1280px) {
+    header{
+        display: flex;
+        height: 200px;
+        flex-direction: column;
+
+    }
+    .hamburger{
+        display: block;
+        margin-right: 15%;
+        
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .logo{
+        margin-top: 0;
+        
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+    .nav_links{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 120px;
+        transition: 0.3s;
+        text-align: center;
+        width: 100%;
+       background-image: linear-gradient(100deg, rgb(154, 119, 127), rgb(239, 128, 97));
+        left: -100%;
+        margin-top: 3%;
+    }
+    
+    .nav_links.active{
+        left: 0;
+        
+    }
+    
+
+    .musicTxt{
+        margin-top: 1%;
+    }
+   
+    #CarMusicText{
+        margin-top: 1%;
+    }
+    #linkBtn{
+        font-size: 20px;
+        
+    }
+   
+    
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+    header{
+        display: flex;
+        flex-direction: row;
+        height: 150px;
+
+
+    }
+    #menuBtn{
+        display: inline-block;
+        
+    }
+    .contactBtn{
+       display: none;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        padding: 20%;
+    }
+    .menu2{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .nav_links{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+
+        flex-direction: column;
+        margin-top: 15%;
+    }
+    .nav_links.active{
+        left: 0;
+    }
+   
+    .profile{
+        display: none;
+    }
+    .profile.active{
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 120%;
+    }
+    .contactBtn.active{
+        display: block;
+        position: fixed;
+        margin-top: 15%;
+        left: 10px;
+        font-size: 10px;
+        
+    }
+   
+}
+
+
+/**************Music page*******************/
+
+
